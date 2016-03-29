@@ -24,7 +24,7 @@ namespace Demo.Shared.UI
 
             var tab1 = new ContentPage()
             {
-                Title = "Tab1",
+                Title = "Aeroportos",
                 Content = new StackLayout()
                 {
                     Orientation = StackOrientation.Vertical,
