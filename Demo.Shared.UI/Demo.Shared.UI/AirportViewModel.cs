@@ -35,8 +35,12 @@ namespace Demo.Shared.UI
         {
             get { return name; }
             set {
-                name = value;
-                OnPropertyChanged("Name");
+                if (name != value)
+                {
+                    name = value;
+                    OnPropertyChanged("Name");
+                    this.LoadAirportCommand.ChangeCanExecute();
+                }
             }
         }
 
@@ -59,7 +63,7 @@ namespace Demo.Shared.UI
 
         public Command LoadAirportCommand
         {
-            get { return loadAirportCommand ?? (loadAirportCommand = new Command(LoadAirport)); }
+            get { return loadAirportCommand ?? (loadAirportCommand = new Command(LoadAirport, CanExecute)); }
         }
 
         public bool CanExecute()
