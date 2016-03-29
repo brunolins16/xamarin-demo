@@ -13,7 +13,7 @@ namespace Demo.Shared.UI
         {
             this.BindingContext = new AirportViewModel();
 
-            var filter = new Editor() { };
+            var filter = new Editor() {  };
             filter.SetBinding(Editor.TextProperty, "Name", BindingMode.TwoWay);
 
             var reloadButton = new Button() { Text = "Recarregar" };
