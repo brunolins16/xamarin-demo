@@ -19,6 +19,9 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>Demo.Shared.UI.UWP_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>AB84794E4799DE7407A783FC1D50EEC78BC3DBAF</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -92,6 +95,9 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="Demo.Shared.UI.UWP_StoreKey.pfx" />
+    <None Include="DeployScripts\UpdateAppVersion.ps1" />
+    <None Include="DeployScripts\UploadUWPToHockeyApp.ps1" />
+    <None Include="DeployScripts\ZipAppxPackage.ps1" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
