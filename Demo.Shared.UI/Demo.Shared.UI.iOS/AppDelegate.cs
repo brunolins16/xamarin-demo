@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin;
 
 namespace Demo.Shared.UI.iOS
 {
@@ -22,6 +23,8 @@ namespace Demo.Shared.UI.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Insights.Initialize("faec20791c9e72b9442a82c2ed86839842845b1b");
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

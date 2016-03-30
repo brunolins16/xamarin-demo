@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin;
 
 namespace Demo.Shared.UI.Droid
 {
@@ -14,6 +15,8 @@ namespace Demo.Shared.UI.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            Insights.Initialize("faec20791c9e72b9442a82c2ed86839842845b1b", this.ApplicationContext);
+
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);

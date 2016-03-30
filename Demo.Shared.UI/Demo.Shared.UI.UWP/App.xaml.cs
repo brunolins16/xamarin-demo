@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Xamarin;
 
 namespace Demo.Shared.UI.UWP
 {
@@ -39,6 +40,8 @@ namespace Demo.Shared.UI.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            //Xamarin Insights
+            Insights.Initialize("faec20791c9e72b9442a82c2ed86839842845b1b");
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
